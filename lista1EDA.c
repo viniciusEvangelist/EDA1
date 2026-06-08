@@ -1,6 +1,7 @@
 #include <stdio.h> //inicialização do arquivo de cabeçalho para entrada e saída padrão
 
-/* int main() {
+//exercicio 1
+int main() {
     int a = 10;
     float b = 3.14;
     int *p1;
@@ -10,9 +11,10 @@
     printf("o valor de a eh: %d\n", *p1);
     printf("o valor de b eh: %.2f\n", *p2);
     return 0;
-}*/
+}
 
-/* int main() {
+//exercicio 2
+int main() {
     int a = 10, b = 20;
     int *p1, *p2;
     p1 = &a;
@@ -23,8 +25,10 @@
     p1 = p2;
     p2 = temp;
     printf("valor de a eh: %d\nvalor de b eh: %d\n", *p2, *p1);
-} */
-/*
+} 
+
+
+//exercicio 3
 int main(){
     int a = 10;
     int *p;
@@ -32,9 +36,10 @@ int main(){
     *p += 5;
     *p *= 2;
     printf("o valor de a depois de somar 5 e multiplicar por 2 eh %d",*p);
-}*/
+}
 
-/*int main(){
+//exercicio 4
+int main(){
     int a = 10, b = 5;
     int *p1, *p2;
     p1 = &a;
@@ -44,9 +49,10 @@ int main(){
     *p2 = *p1 - *p2;
     *p1 = *p1 - *p2;
     printf("o valor de a eh: %d\no valor de b eh: %d", *p2, *p1);
-} */
+} 
 
-/*int main(){ 
+//exercicio 5
+int main(){ 
     int v[5] = {10, 20, 30, 40, 50};
     int *p;
     int soma;
@@ -58,9 +64,10 @@ int main(){
     }
     printf("\nsoma igual a: %d", soma);
    
-}*/
+}
 
-/*void dobra(int *x){
+//exercicio 6
+void dobra(int *x){
     *x *= 2;
 }
 
@@ -68,8 +75,23 @@ int main(){
     int a = 10;
     dobra(&a);
     printf("o novo valor de a eh: %d\n", a);
-}*/
-
-int maior(int *v, int tamanho){
-    int max = v;
 }
+
+//Execicio 7
+int maior(int *v, int tamanho){
+    int max = *v;
+    for(int i = 1; i<tamanho; i++){
+        if(*(v+i) > max){
+            max = *(v+i);
+        }
+    }
+    return max;
+}
+
+int main(){
+    int v[5] = {10, 20, 5, 30, 15};
+    int max = maior(v, 5);
+    printf("o maior valor do vetor eh: %d\n", max);
+}
+
+//exercicio 8
