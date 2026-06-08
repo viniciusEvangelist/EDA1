@@ -110,3 +110,25 @@ int main(){
     printf("existem %d letra(s) c na palavra %s \n", conta(nome, 'c'), nome);
     return 0;
 }
+//exercicio 9
+void inverte(int *v, int tamanho){
+    int *inicio = v;
+    int *fim = v + tamanho - 1;
+    int temp;
+    while(inicio < fim){
+        temp = *inicio;
+        *inicio = *fim;
+        *fim = temp;
+        inicio++;
+        fim--;
+    }
+}
+int main(){
+    int v[] = {1, 2, 3, 4, 5, 6};
+    inverte(v, 6);
+    for(int i =0; i<6; i++){
+        printf("%d ", v[i]);
+    }
+}
+//exercicio 10
+
