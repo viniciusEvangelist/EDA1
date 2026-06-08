@@ -95,3 +95,18 @@ int main(){
 }
 
 //exercicio 8
+int conta(char *str, char c){
+    int count = 0;
+    while(*str != '\0'){ //esse \0 indica o fim da string, ele não é visualizavel, fica na memoria
+        if (*str == c){
+            count += 1;
+        }
+        str++;
+    }
+    return count;
+}
+int main(){
+    char nome[] = "programacao"; //aqui por exemplo ficaria "p r o g r a m a c a o \0" na memoria
+    printf("existem %d letra(s) c na palavra %s \n", conta(nome, 'c'), nome);
+    return 0;
+}
