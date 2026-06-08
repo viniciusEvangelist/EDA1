@@ -147,3 +147,19 @@ int main(){
     }
     return 0;
 }
+//exercicio 11
+int compara(char *s1, char *s2){
+    while(*s1 && *s2 && *s1 == *s2){
+        s1++;
+        s2++;
+    }
+    return *s1 - *s2;
+}
+int main(){
+    char a[] = "casa";
+    char b[] = "casa";
+    char c[] = "koala";
+    printf("%d\n", compara(a, b));
+    printf("%d\n", compara(a, c));
+    return 0;
+}
